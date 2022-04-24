@@ -1,0 +1,12 @@
+{
+	"extends": "./node_modules/gts/tsconfig-google.json",
+	"compilerOptions": {
+		"rootDir": ".",
+		"outDir": "build"
+	},
+	"include": ["src/**/*.ts", "test/**/*.ts"],
+	"moduleResolution": "node",
+	"experimentalDecorators": true,
+	"emitDecoratorMetadata": true,
+	"types": ["node", "mocha", "chai"]
+}
