@@ -1,1 +1,0 @@
-# Typescirpt testing practice
