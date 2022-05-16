@@ -1,0 +1,35 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "target": "es6", // Target compile es6
+    "module": "commonjs", // Module 'import'
+    "allowJs": true, // Allow js on ts
+    "checkJs": true, // Check error on js
+    "jsx": "preserve", // Xml, no React.createElement()
+    "declaration": true, // Auto-generate .d.ts
+    "removeComments": true, // Remove comments after compile
+    "forceConsistentCasingInFileNames": true, // No dangling files
+
+    "strict": true, // noImplicit options
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+
+    "noUnusedLocals": true, //쓰지않는 지역변수 있으면 에러내기
+    "noUnusedParameters": true, //쓰지않는 파라미터 있으면 에러내기
+    "noImplicitReturns": true, //함수에서 return 빼먹으면 에러내기
+    "noFallthroughCasesInSwitch": true, //switch문 이상하면 에러내기
+
+    "outDir": "./build",
+    "baseUrl": ".",
+    "paths": {
+      "@server/*": ["src/*"],
+      "@tests/*": ["__tests__/*"],
+      "@config/*": ["src/config/*"],
+      "@domain/*": ["src/domain/*"],
+      "@controller/*": ["src/controller/*"],
+      "@middleware/*": ["src/middleware/*"]
+    }
+  },
+  "include": ["src/**/*", "__tests__/**/*"],
+  "exclude": ["node_modules", "build"]
+}
